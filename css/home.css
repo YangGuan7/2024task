@@ -3,11 +3,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 312px;
+  gap: 24px;
 }
 .headerIndexText {
   width: 30%;
   display: flex;
-  padding-left: 312px;
   flex-direction: column;
 }
 .descriptionText {

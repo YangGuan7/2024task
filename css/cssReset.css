@@ -127,3 +127,47 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+/* 我的變數 */
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-gray-light: #f1f1f1;
+  --color-gray-dark: #c1c1c1;
+  --color-gray-darker: #919191;
+  --color-black2: #1e1e1e;
+  --color-black3: #3b3b3b;
+  --color-nav: #fafafa;
+  --color-footer-bg: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-lg.png?raw=true");
+  --color-icon: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/2f8d8c7a6133b448ecff5bf0a3d282b87b7c6a7e/2024%20web-camp/logo.svg");
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  line-height: 1.5;
+}
+
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+h2 {
+  line-height: 1.2;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-black3);
+}
