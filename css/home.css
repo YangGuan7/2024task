@@ -1,0 +1,179 @@
+.headerIndex {
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.headerIndexText {
+  width: 30%;
+  display: flex;
+  padding-left: 312px;
+  flex-direction: column;
+}
+.descriptionText {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.headerIndexText span {
+  margin: 0 8px;
+  display: block;
+  position: relative;
+  display: inline-block;
+}
+.headerIndexText p {
+  font-size: 20px;
+}
+.headerIndexText h2 {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 48px;
+  margin-bottom: 24px;
+}
+.indexUnderLine {
+  left: -10px;
+  bottom: 0;
+  width: 120%;
+}
+.smallText {
+  margin-top: 16px;
+}
+.headerIndexImg {
+  width: 70%;
+}
+.headerIcon {
+  display: flex;
+  gap: 16px;
+  margin-top: 60px;
+}
+.smallText {
+  font-size: 16px;
+  color: var(--color-gray-dark);
+  line-height: 24px;
+}
+.mainIndex {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin-top: 120px;
+}
+
+.indexTittle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  font-size: 32px;
+  line-height: 38.4px;
+  font-weight: bold;
+  letter-spacing: 3.84px;
+}
+/* serviceArea */
+.serviceArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 80px;
+  /* margin: 120px 312px; */
+  height: 800px;
+  /* width: 100%; */
+}
+.serviceUl {
+  display: flex;
+  gap: 24px;
+}
+.serviceUl li {
+  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/service-item-bg.png?raw=true");
+  width: 306px;
+  height: 306px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 24px;
+}
+.serviceUlText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.serviceUlText h5 {
+  display: inline-block;
+}
+.introButton {
+  margin: 0;
+  padding: 0;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: var(--color-black);
+  border-radius: 5px;
+  line-height: 30px;
+}
+/*  */
+
+.articleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.articleArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  margin: 120px 313px;
+}
+.articleText {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 8px;
+}
+.articleText div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.articleUl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  gap: 24px;
+}
+.articleUl li {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.articlePagination {
+  display: flex;
+  gap: 16px;
+}
+
+.articlePagination li {
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+}
+.articlePaginationActive {
+  background-color: black;
+}
+.articlePaginationDisable {
+  background-color: #e9e9e9;
+}
