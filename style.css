@@ -445,7 +445,6 @@ footer {
 
   .workListLi {
     width: 48%;
-    /* margin-bottom: 40px; */
   }
   footer {
     display: flex;
@@ -454,7 +453,6 @@ footer {
     align-items: center;
     text-align: center;
     gap: 40px;
-    /* padding: 40px 12px; */
   }
   .footerLeft {
     display: flex;
@@ -468,8 +466,7 @@ footer {
   }
 }
 
-/* iPad */
-/* iPad */
+/* 平板 */
 @media (max-width: 767px) {
   .container {
     gap: 48px;
@@ -477,7 +474,6 @@ footer {
   }
   .workListLi {
     width: 100%;
-    /* margin-bottom: 40px; */
   }
 
   .footer {
@@ -570,8 +566,7 @@ footer {
   }
 }
 
-/* iPhone */
-/* iPhone */
+/* 手機尺寸 */
 @media (max-width: 375px) {
   .container {
     width: 100%;
