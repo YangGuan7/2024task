@@ -101,7 +101,7 @@ h2 {
   font-size: 26px;
 }
 
-/* header */
+/* headerBanner */
 .headerWorkArea {
   background-color: var(--color-nav);
   display: flex;
