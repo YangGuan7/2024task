@@ -1,0 +1,652 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  line-height: 1.5;
+}
+
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+h2 {
+  line-height: 1.2;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-black3);
+}
+
+/* 我的變數 */
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-gray-light: #f1f1f1;
+  --color-gray-dark: #c1c1c1;
+  --color-gray-darker: #919191;
+  --color-black2: #1e1e1e;
+  --color-black3: #3b3b3b;
+  --color-nav: #fafafa;
+  --color-footer-bg: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-lg.png?raw=true");
+  --color-icon: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/2f8d8c7a6133b448ecff5bf0a3d282b87b7c6a7e/2024%20web-camp/logo.svg");
+}
+/* 導覽列 */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1296px;
+  padding: 32px;
+}
+
+.navbar h1 a {
+  background-image: var(--color-icon);
+  width: 90px;
+  height: 40px;
+  display: block;
+}
+
+.menu {
+  display: flex;
+  gap: 40px;
+}
+
+.menu li {
+  position: relative;
+  padding: 4px 8px;
+}
+
+.menu a {
+  color: var(--color-black);
+}
+
+.menuActive,
+.menuDisable a:hover::before {
+  font-weight: bold;
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--color-black);
+  mask: conic-gradient(at 8px 8px, rgba(0, 0, 0, 0) 75%, #919191 0) 0 0 /
+      calc(100% - 8px) calc(100% - 8px),
+    linear-gradient(#919191 0 0) content-box;
+}
+
+/* 漢堡鍵先隱藏 */
+.menuIcon img {
+  display: none;
+}
+.menuIcon:checked ~ .menu li a {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  max-height: 300px;
+  background-color: black;
+  padding: 50px;
+  line-height: 25px;
+  font-size: 26px;
+}
+
+/* header */
+.headerWorkArea {
+  background-color: var(--color-nav);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+}
+
+.slogn {
+  width: 670px;
+  text-align: center;
+}
+
+.quoteLeft {
+  padding-right: 90%;
+  display: block;
+}
+
+.quoteRight {
+  padding-left: 90%;
+  display: block;
+}
+
+.slogn-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+}
+
+.slogn-text h2 {
+  color: var(--color-primary);
+  font-size: 24px;
+  line-height: 28.8px;
+}
+
+.textPoint {
+  display: inline-block;
+  position: relative;
+  z-index: 3;
+}
+
+.underLine {
+  position: absolute;
+  z-index: -1;
+}
+
+.workUnderLine {
+  left: 35px;
+  bottom: 0;
+}
+
+.serviceList {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  width: 636px;
+  list-style: none;
+}
+
+.serviceList li {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.serviceList li h3 {
+  font-size: 16px;
+  line-height: 24px;
+  color: #5b5b5b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+/* 偽元素 */
+.serviceList li h3::after {
+  margin-top: 4px;
+  content: "";
+  display: block;
+  width: 24px;
+  border-bottom: 2px solid var(--color-gray-dark);
+}
+
+.serviceList li p {
+  color: --color-black3;
+  text-align: center;
+}
+
+/* 主要課程卡片內容 */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  max-width: 1296px;
+  margin: 0 auto;
+  padding: 120px 0;
+}
+
+.workList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  row-gap: 80px;
+}
+
+.workListLi {
+  box-sizing: border-box;
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+.workTextArea {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0 16px;
+}
+.workTextTop {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.workList img {
+  border-radius: 8px;
+  vertical-align: middle;
+  border: 1px solid var(--color-gray-light);
+}
+
+.workListLi p {
+  color: var(--color-gray-darker);
+  font-size: 16px;
+}
+
+.tags {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 16px;
+  gap: 16px;
+}
+.tags li {
+  padding: 4px 12px;
+  background: var(--color-gray-light);
+
+  border-radius: 16px;
+}
+
+.paginator {
+  display: flex;
+  justify-content: center;
+}
+
+.paginator a {
+  color: --color-black3;
+  padding: 2px 13px;
+  text-decoration: none;
+  border: 0px solid #ddd;
+  margin: 0 10px;
+  border-radius: 4px;
+  font-size: 24px;
+  color: var(--color-black3);
+}
+
+.paginator a.active {
+  background-color: var(--color-black2);
+  color: #fff;
+}
+
+/*  footer頁尾 */
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: var(--color-footer-bg);
+  padding: 80px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footerLeft {
+  width: 686px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+}
+
+.footerLeft img {
+  width: 120px;
+}
+
+.footerItem {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.footerItemDisabled {
+  width: 306px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--color-white);
+  border-radius: 8px;
+  padding: 8px 24px;
+  border: 1px solid var(--color-gray-dark);
+}
+
+.footerItemActive {
+  width: 306px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--color-black);
+  border-radius: 8px;
+  padding: 8px 24px;
+}
+
+.footerItem li a {
+  display: flex;
+  align-items: center;
+}
+
+.footerItemDisabled a {
+  color: var(--color-black3);
+}
+
+.footerItemActive a {
+  color: var(--color-white);
+}
+
+.email {
+  color: var(--color-gray-darker);
+}
+
+/* #endregion footer */
+@media (max-width: 1295px) {
+  .container {
+    padding: 80px 12px;
+  }
+  .workListLi {
+    width: 48%;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding: 80px 12px;
+  }
+  .navbar {
+    max-width: 992px;
+    margin: 0;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu {
+    display: none;
+  }
+  .menuIcon img {
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
+  .headerWorkArea {
+    padding: 40px 24px 80px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .slogn {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .quoteLeft {
+    padding: 0;
+    width: 64px;
+    height: 64px;
+  }
+
+  .quoteRight {
+    padding: 0;
+    display: none;
+  }
+
+  .quoteLeft,
+  .quoteRight {
+    padding: 0;
+  }
+
+  .slogn-text {
+    gap: 8px;
+  }
+
+  .serviceList {
+    display: flex;
+    flex-direction: column;
+    width: 235px;
+    gap: 20px;
+  }
+
+  .serviceList li {
+    gap: 4px;
+  }
+  .header-inner {
+    justify-content: space-between;
+  }
+
+  .logo {
+    margin-right: 0;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    gap: 40px;
+  }
+
+  .menu-control:checked ~ .menu {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .workListLi {
+    width: 48%;
+    /* margin-bottom: 40px; */
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    /* padding: 40px 12px; */
+  }
+  .footerLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+  .footerLeft img {
+    width: 120px;
+  }
+}
+
+/* iPad */
+/* iPad */
+@media (max-width: 767px) {
+  .container {
+    gap: 48px;
+    padding: 80px 12px;
+  }
+  .workListLi {
+    width: 100%;
+    /* margin-bottom: 40px; */
+  }
+
+  .footer {
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-sm.png?raw=true");
+  }
+
+  .footer-inner {
+    flex-direction: column;
+  }
+
+  .footer-contact {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .headerWorkArea {
+    padding: 40px 24px 80px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .slogn {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .quoteLeft {
+    padding: 0;
+    width: 64px;
+    height: 64px;
+  }
+
+  .quoteRight {
+    padding: 0;
+    display: none;
+  }
+  .quoteLeft,
+  .quoteRight {
+    padding: 0;
+  }
+
+  .slogn-text {
+    gap: 8px;
+  }
+
+  .serviceList {
+    display: flex;
+    flex-direction: column;
+    width: 235px;
+  }
+
+  .serviceList li {
+    gap: 4px;
+  }
+
+  .header-inner {
+    justify-content: space-between;
+  }
+
+  .logo {
+    margin-right: 0;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    gap: 40px;
+  }
+
+  .menu-control:checked ~ .menu {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .paginator {
+    margin-top: 40px;
+    margin-bottom: 80px;
+  }
+  .footerLeft {
+    width: 100%;
+  }
+}
+
+/* iPhone */
+/* iPhone */
+@media (max-width: 375px) {
+  .container {
+    width: 100%;
+  }
+  .slogn {
+    width: 100%;
+  }
+  .serviceList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .quoteLeft {
+    padding: 0;
+    width: 64px;
+    height: 64px;
+  }
+
+  .quoteRight {
+    padding: 0;
+    display: none;
+  }
+
+  .workListLi {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  footer {
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-sm.png?raw=true");
+    width: 100%;
+    padding: 0 35px;
+  }
+  .footerLeft,
+  .footerItem,
+  .footerItemActive,
+  .footerItemDisabled {
+    width: 100%;
+  }
+  .tags {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .footerItemActive,
+  .footerItemDisabled {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  .footerItemActive a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  .footerItemActive,
+  .footerItemDisabled a {
+    display: flex;
+    flex-direction: column;
+  }
+  .email {
+    width: 100%;
+    word-wrap: break-word;
+  }
+  .paginator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
